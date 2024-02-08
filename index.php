@@ -10,5 +10,5 @@ if (TEST) {
     require_once SERVER_DIR."/tests/tests.php";
 }
 
-require_once SERVER_DIR."/route.php";
+require_once SERVER_DIR."/Router.php";
 
