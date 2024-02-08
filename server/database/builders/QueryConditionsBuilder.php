@@ -1,4 +1,6 @@
 <?php
+require_once SERVER_DIR."/utils.php";
+
 class QueryConditionsBuilder {
     public array $conditions = [];
     public array $placeholders = [];

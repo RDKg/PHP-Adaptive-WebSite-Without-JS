@@ -58,7 +58,7 @@ class DatabaseHandler {
             $values = $queryBuilder->getInsertPlaceholderValueData()[0];
             $statement = $this->db->prepare($query);
 
-            for ($i = 0; $i < count($values)+1; $i++) {
+            for ($i = 0; $i < count($values["values"]); $i++) {
                 $statement->bindParam(
                     $values["placeholders"][$i],
                     $values["values"][$i]
@@ -89,7 +89,7 @@ class DatabaseHandler {
             $values = $queryBuilder->getSelectPlaceholderValueData()[0];
             $statement = $this->db->prepare($query);
 
-            for ($i = 0; $i < count($values)+1; $i++) {
+            for ($i = 0; $i < count($values["values"]); $i++) {
                 $statement->bindParam(
                     $values["placeholders"][$i],
                     $values["values"][$i]
@@ -120,7 +120,7 @@ class DatabaseHandler {
             $values = $queryBuilder->getUpdatePlaceholderValueData()[0];
             $statement = $this->db->prepare($query);
                 
-            for ($i = 0; $i < count($values)+1; $i++) {
+            for ($i = 0; $i < count($values["values"]); $i++) {
                 $statement->bindParam(
                     $values["placeholders"][$i],
                     $values["values"][$i]

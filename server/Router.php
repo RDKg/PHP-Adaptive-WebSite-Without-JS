@@ -30,7 +30,7 @@ class Router {
         }
         
         if (str_contains($uri, "/api/")) {
-            require $route["handler"];
+            require $route["path"];
             exit;
         }
 
@@ -151,12 +151,10 @@ $router->define([
     "api_register" => [
         "uri" => "/api/register/",
         "path" => SERVER_DIR."/api/register.php",
-        "handler" => SERVER_DIR."/api/register.php",
     ],
     "api_login" => [
         "uri" => "/api/login/",
         "path" => SERVER_DIR."/api/login.php",
-        "handler" => SERVER_DIR."/api/login.php",
     ],
 ]);
 $router->handleRequest();

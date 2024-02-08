@@ -22,12 +22,12 @@ class DatabaseService extends DatabaseHandler {
 
     public function getUserdataByAuthData($login=null, $password=null, $authToken=null) {
         $queryConditions = QueryConditionsBuilder::create()
+            ->where("authToken", "=", $authToken)
             ->openSeparate()
-            ->where("email", "=", $login)
+            ->orWhere("email", "=", $login)
             ->orWhere("username", "=", $login)
             ->orWhere("phone", "=", $login)
-            ->closeSeparate()
-            ->orWhere("authToken", "=", $authToken);
+            ->closeSeparate();
         $queryBuilder = new QueryBuilder("users", [$queryConditions]);
         $result = $this->getEntries($queryBuilder);
 

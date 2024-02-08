@@ -11,7 +11,7 @@ function login($username, $password) {
     }
 
     $_SESSION["errors"] = [
-        "username" => "Неверный логин/почта!"
+        "username" => "Неверный логин или пароль!"
     ];
     
     header("Location: /login.php");
