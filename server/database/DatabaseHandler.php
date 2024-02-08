@@ -55,7 +55,7 @@ class DatabaseHandler {
     public function insertEntry(QueryBuilder $queryBuilder) {
         try {
             $query = $queryBuilder->getInsertQueryString();
-            $values = $queryBuilder->getInsertPlaceholderValueData();
+            $values = $queryBuilder->getInsertPlaceholderValueData()[0];
             $statement = $this->db->prepare($query);
 
             for ($i = 0; $i < count($values)+1; $i++) {
@@ -117,7 +117,7 @@ class DatabaseHandler {
     public function updateEntry(QueryBuilder $queryBuilder) {
         try {
             $query = $queryBuilder->getUpdateQueryString();
-            $values = $queryBuilder->getUpdatePlaceholderValueData();
+            $values = $queryBuilder->getUpdatePlaceholderValueData()[0];
             $statement = $this->db->prepare($query);
                 
             for ($i = 0; $i < count($values)+1; $i++) {

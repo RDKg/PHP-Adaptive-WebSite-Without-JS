@@ -27,6 +27,7 @@ function register($username, $email, $phone, $password, $repeatPassword) {
         ->addAssignment("username", $username)
         ->addAssignment("email", $email)
         ->addAssignment("phone", $phone)
+        ->addAssignment("authToken", $user->authToken)
         ->addAssignment("hash", $user->hash);
     $queryBuilder = new QueryBuilder("users", [$querySetValues]);
     $result = $db->insertEntry($queryBuilder);
