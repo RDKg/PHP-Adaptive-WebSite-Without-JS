@@ -1,0 +1,10 @@
+SQLSTATE[HY000] [14] unable to open database file
+SQLSTATE[HY000] [14] unable to open database file
+SQLSTATE[HY000] [14] unable to open database file
+SQLSTATE[HY000] [14] unable to open database file
+SQLSTATE[HY000] [14] unable to open database file
+SQLSTATE[HY000] [14] unable to open database file
+SQLSTATE[HY000] [14] unable to open database file
+SQLSTATE[HY000] [14] unable to open database file
+SQLSTATE[HY000] [14] unable to open database file
+SQLSTATE[HY000]: General error: 1 table users has no column named password
