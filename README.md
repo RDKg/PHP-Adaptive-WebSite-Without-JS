@@ -17,3 +17,5 @@
 ### Запуск приложения:
 1. Запустите **start_server.cmd**
 2. Отройте в браузере **http://localhost:8080**
+
+![RUBI - Google Chrome 2024-02-09 20-50-13](https://github.com/RDKg/PHP-Adaptive-WebSite-Without-JS/assets/115119289/a25ba63b-b052-4fef-9185-02939a437469)
