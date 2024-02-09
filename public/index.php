@@ -20,27 +20,27 @@ $isAuth = $userdata !== null;
 </head>
 <body>
     <?php
-        echo get_header($isAuth, $_SERVER["REQUEST_URI"]);
+        echo get_header($isAuth);
     ?>
     <main>
         <section class="welcome-section-container section-gap restrictor">
             <div class="welcome-links">
-                <a id="youtube-link" class="welcome-link" href="#" target="_blank">
+                <a id="youtube-link" class="welcome-link" href="https://www.youtube.com/channel/UCV4xE3OpyiOX2xSCud31zYA" target="_blank">
                     <div>
                         <img src="/assets/icons/youtube.svg">
                     </div>
                 </a>
-                <a id="github-link" class="welcome-link" href="#" target="_blank">
+                <a id="github-link" class="welcome-link" href="https://github.com/RDKg/PHP-Adaptive-WebSite-Without-JS" target="_blank">
                     <div>
                         <img src="/assets/icons/github.svg">
                     </div>
                 </a>
-                <a id="vk-link" class="welcome-link" href="#" target="_blank">
+                <a id="vk-link" class="welcome-link" href="https://vk.com/rdk_g" target="_blank">
                     <div>
                         <img src="/assets/icons/vk.svg">
                     </div>
                 </a>
-                <a id="tg-link" class="welcome-link" href="#" target="_blank">
+                <a id="tg-link" class="welcome-link" href="https://t.me/rubin_rudenko" target="_blank">
                     <div>
                         <img src="/assets/icons/tg.svg">
                     </div>

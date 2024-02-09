@@ -28,7 +28,7 @@ unset($_SESSION["errors"]);
 </head>
 <body>
     <?php
-        echo get_header($isAuth, $_SERVER["REQUEST_URI"]);
+        echo get_header($isAuth);
     ?>
     <main>
         <section class="sign-section-container section-gap restrictor">

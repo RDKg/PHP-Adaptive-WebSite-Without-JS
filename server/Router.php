@@ -156,5 +156,9 @@ $router->define([
         "uri" => "/api/login/",
         "path" => SERVER_DIR."/api/login.php",
     ],
+    "api_logout" => [
+        "uri" => "/api/logout/",
+        "path" => SERVER_DIR."/api/logout.php",
+    ],
 ]);
 $router->handleRequest();

@@ -1,5 +1,34 @@
 <?php
-function get_header($isAuth, $uri) {
+require_once SERVER_DIR."/utils.php";
+
+function get_header($isAuth) {
+    $links = '
+        <ul id="header-sign-links">
+            <a id="sign-in" href="/login/">
+                <li>
+                    <img src="/assets/icons/door.svg">
+                </li>
+            </a>
+            <a id="sign-up" href="/register/">
+                <li>
+                    РЕГИСТРАЦИЯ
+                </li>
+            </a>
+        </ul>
+    ';
+
+    if ($isAuth) {
+        $links = '
+            <ul id="header-sign-links">
+                <a id="logout" href="/api/logout/">
+                    <li>
+                        ВЫЙТИ
+                    </li>
+                </a>
+            </ul>
+        ';
+    }
+
     $header = '
         <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
         <header class="unselect restrictor">
@@ -14,39 +43,10 @@ function get_header($isAuth, $uri) {
                         MUSI
                     </h1>
                 </a>
-                <ul id="header-sign-links">
-                    <a id="sign-in" href="/login/">
-                        <li>
-                            <img src="/assets/icons/door.svg">
-                        </li>
-                    </a>
-                    <a id="sign-up" href="/register/">
-                        <li>
-                            РЕГИСТРАЦИЯ
-                        </li>
-                    </a>
-                </ul>
+                '.$links.'
             </div>
         </header>
     ';
-    
-    // libxml_use_internal_errors(true);
-    
-    // $dom = new DOMDocument();
-    // $dom->loadHTML($header);
-    // $elements = $dom->getElementsByTagName("a");
-    
-    // libxml_use_internal_errors(false);
-    
-    // foreach ($elements as $node) {
-    //     $href = $node->attributes->item(0)->nodeValue;
-        
-    //     if ($href == $uri) {
-    //         $node->setAttribute("class", "selected-header-link");
-    //     }
-    // }
-    
-    // $header = $dom->saveHTML();
 
     return $header;
 }

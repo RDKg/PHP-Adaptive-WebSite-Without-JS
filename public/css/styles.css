@@ -64,13 +64,15 @@ footer span {
 }
 
 #sign-up li,
-#sign-in li {
+#sign-in li,
+#logout li {
     font-weight: 400;
     font-size: 24px;
     transition: all 0.1s ease-in-out;
 }
 
-#sign-up li {
+#sign-up li,
+#logout li {
     display: flex;
     background-color: rgba(var(--dark-color), 100%);
 }

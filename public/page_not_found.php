@@ -19,7 +19,7 @@ $isAuth = $userdata !== null;
 </head>
 <body>
     <?php
-        echo get_header($isAuth, $_SERVER["REQUEST_URI"]);
+        echo get_header($isAuth);
     ?>
     <main>
         <section class="page-not-found-section-container">

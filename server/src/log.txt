@@ -27,3 +27,5 @@ SQLSTATE[HY000]: General error: 1 near "(": syntax error
 SQLSTATE[HY000]: General error: 1 near "(": syntax error
 SQLSTATE[HY000]: General error: 1 near "(": syntax error
 SQLSTATE[HY000]: General error: 1 near "(": syntax error
+SQLSTATE[23000]: Integrity constraint violation: 19 UNIQUE constraint failed: users.username
+SQLSTATE[23000]: Integrity constraint violation: 19 UNIQUE constraint failed: users.username
